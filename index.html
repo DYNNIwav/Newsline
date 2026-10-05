@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsline - Latest news</title>
+    <meta name="description" content="Newsline is a simple news platform where registered users can submit articles." />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/feed.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <nav class="container nav">
+        <a href="./" class="logo" aria-label="Newsline - Home">
+          <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="21" x2="200" y2="21" stroke="#0EA5E9" stroke-width="3.5"/>
+            <text x="8" y="29" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="24" letter-spacing="-0.5" fill="#0F172A" paint-order="stroke" stroke="#F8FAFC" stroke-width="1.5">Newsline</text>
+          </svg>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="./account/login.html">Log in</a>
+          <a href="./account/register.html">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container" id="main">
+      <section id="posts">
+        <h1>Latest news</h1>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Newsline</p>
+    </footer>
+
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
