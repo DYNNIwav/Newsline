@@ -22,12 +22,12 @@ async function handleSubmit(event) {
     successMessage.textContent = '';
 
     if (password.length < 8) {
-        errorMessage.textContent = 'The password must be at least 8 characters.';
+        errorMessage.textContent = 'Passordet må vera minst 8 teikn.';
         return;
     }
 
     if (password !== confirmPassword) {
-        errorMessage.textContent = 'The passwords do not match.';
+        errorMessage.textContent = 'Passorda er ikkje like.';
         return;
     }
 
@@ -37,13 +37,13 @@ async function handleSubmit(event) {
         const data = await register(email, password);
 
         if (data.user && data.user.identities.length === 0) {
-            errorMessage.textContent = 'There is already an account with this email.';
+            errorMessage.textContent = 'Det finst allereie ein konto med denne e-posten.';
             button.disabled = false;
             return;
         }
 
         form.reset();
-        successMessage.textContent = 'Your account is created! Check your email and click the link to confirm it, then log in.';
+        successMessage.textContent = 'Kontoen din er oppretta! Sjekk e-posten din og trykk på lenkja for å stadfesta han, så kan du logga inn.';
     } catch (error) {
         errorMessage.textContent = error.message;
     }

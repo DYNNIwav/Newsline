@@ -20,6 +20,9 @@ export async function register(email, password) {
     });
 
     if (error) {
+        if (error.message.includes('rate limit')) {
+            throw new Error('For mange forsøk. Vent litt og prøv igjen.');
+        }
         throw new Error(error.message);
     }
 
@@ -31,10 +34,10 @@ export async function login(email, password) {
 
     if (error) {
         if (error.message === 'Email not confirmed') {
-            throw new Error('You need to confirm your email first. Check your inbox for the link.');
+            throw new Error('Du må stadfesta e-posten din først. Sjekk innboksen for lenkja.');
         }
         if (error.message === 'Invalid login credentials') {
-            throw new Error('Wrong email or password.');
+            throw new Error('Feil e-post eller passord.');
         }
         throw new Error(error.message);
     }

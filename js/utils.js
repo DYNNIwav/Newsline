@@ -1,5 +1,5 @@
 export function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString('en-GB', {
+    return new Date(dateString).toLocaleDateString('nn-NO', {
         day: 'numeric',
         month: 'long',
         year: 'numeric',

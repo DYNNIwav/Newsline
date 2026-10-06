@@ -18,7 +18,7 @@ function formatBody(text) {
 
 async function loadPost() {
     if (!postId) {
-        postContainer.innerHTML = '<p class="error-message">No article selected.</p><a href="../" class="back-link">&larr; Back to all articles</a>';
+        postContainer.innerHTML = '<p class="error-message">Inga nyheit er vald.</p><a href="../" class="back-link">&larr; Tilbake til alle nyheiter</a>';
         return;
     }
 
@@ -31,7 +31,7 @@ async function loadPost() {
         .maybeSingle();
 
     if (error || !post) {
-        postContainer.innerHTML = '<p class="error-message">Could not find this article.</p><a href="../" class="back-link">&larr; Back to all articles</a>';
+        postContainer.innerHTML = '<p class="error-message">Fann ikkje denne nyheita.</p><a href="../" class="back-link">&larr; Tilbake til alle nyheiter</a>';
         return;
     }
 
@@ -40,10 +40,10 @@ async function loadPost() {
     postContainer.innerHTML = `
         <p class="post-category">${escapeHtml(post.category)}</p>
         <h1>${escapeHtml(post.title)}</h1>
-        <p class="post-meta">Published ${formatDate(post.created_at)}</p>
+        <p class="post-meta">Publisert ${formatDate(post.created_at)}</p>
         <hr class="post-divider">
         <div class="post-body">${formatBody(post.body)}</div>
-        <a href="../" class="back-link">&larr; Back to all articles</a>
+        <a href="../" class="back-link">&larr; Tilbake til alle nyheiter</a>
     `;
 }
 

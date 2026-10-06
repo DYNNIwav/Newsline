@@ -1,61 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="nn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register - Newsline</title>
-    <meta name="description" content="Create an account on Newsline." />
+    <title>Registrer - Newsline</title>
+    <meta name="description" content="Registrer ein konto på Newsline." />
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link">Hopp til innhald</a>
     <header>
       <nav class="container nav">
-        <a href="../" class="logo" aria-label="Newsline - Home">
+        <a href="../" class="logo" aria-label="Newsline - Heim">
           <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
             <line x1="0" y1="21" x2="200" y2="21" stroke="#0EA5E9" stroke-width="3.5"/>
             <text x="8" y="29" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="24" letter-spacing="-0.5" fill="#0F172A" paint-order="stroke" stroke="#F8FAFC" stroke-width="1.5">Newsline</text>
           </svg>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="../account/login.html">Log in</a>
-          <a href="../account/register.html">Register</a>
+          <a href="../account/login.html">Logg inn</a>
+          <a href="../account/register.html">Registrer</a>
         </div>
       </nav>
     </header>
 
     <main class="container" id="main">
       <div class="form-wrapper">
-        <h1>Register</h1>
+        <h1>Registrer</h1>
 
         <form id="register-form">
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="name@example.com" />
-            <small class="form-hint">We will send you an email to confirm your account</small>
+            <label for="email">E-post</label>
+            <input type="email" id="email" name="email" required placeholder="namn@eksempel.no" />
+            <small class="form-hint">Du får ein e-post for å stadfesta kontoen</small>
           </div>
 
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password">Passord</label>
             <input type="password" id="password" name="password" required minlength="8" />
-            <small class="form-hint">At least 8 characters</small>
+            <small class="form-hint">Minst 8 teikn</small>
           </div>
 
           <div class="form-group">
-            <label for="confirm-password">Confirm password</label>
+            <label for="confirm-password">Bekreft passord</label>
             <input type="password" id="confirm-password" name="confirm-password" required minlength="8" />
-            <small class="form-hint">Must match the password above</small>
+            <small class="form-hint">Må vera likt passordet over</small>
           </div>
 
           <div id="error-message" class="error-message" aria-live="polite"></div>
           <div id="success-message" class="success-message" aria-live="polite"></div>
 
-          <button type="submit" class="btn btn-primary">Register</button>
+          <button type="submit" class="btn btn-primary">Registrer</button>
         </form>
 
         <p class="form-footer">
-          Already have an account? <a href="./login.html">Log in</a>
+          Har du allereie ein konto? <a href="./login.html">Logg inn</a>
         </p>
       </div>
     </main>

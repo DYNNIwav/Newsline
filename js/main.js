@@ -14,12 +14,12 @@ async function loadPosts() {
     postsContainer.querySelector('.loading').remove();
 
     if (error) {
-        postsContainer.insertAdjacentHTML('beforeend', '<p class="error-message">Could not load the articles. Please try again later.</p>');
+        postsContainer.insertAdjacentHTML('beforeend', '<p class="error-message">Kunne ikkje lasta inn nyheiter. Prøv igjen seinare.</p>');
         return;
     }
 
     if (posts.length === 0) {
-        postsContainer.insertAdjacentHTML('beforeend', '<p>No articles yet. Log in and be the first to write one!</p>');
+        postsContainer.insertAdjacentHTML('beforeend', '<p>Det er ingen nyheiter enno. Logg inn og skriv den første!</p>');
         return;
     }
 

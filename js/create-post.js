@@ -24,17 +24,17 @@ async function handleSubmit(event) {
     successMessage.textContent = '';
 
     if (title.length < 3) {
-        errorMessage.textContent = 'The title must be at least 3 characters.';
+        errorMessage.textContent = 'Tittelen må vera minst 3 teikn.';
         return;
     }
 
     if (!category) {
-        errorMessage.textContent = 'Please choose a category.';
+        errorMessage.textContent = 'Vel ein kategori.';
         return;
     }
 
     if (body.length < 20) {
-        errorMessage.textContent = 'The article text must be at least 20 characters.';
+        errorMessage.textContent = 'Innhaldet må vera minst 20 teikn.';
         return;
     }
 
@@ -47,12 +47,12 @@ async function handleSubmit(event) {
         .single();
 
     if (error) {
-        errorMessage.textContent = 'Could not publish the article: ' + error.message;
+        errorMessage.textContent = 'Kunne ikkje publisera nyheita: ' + error.message;
         button.disabled = false;
         return;
     }
 
-    successMessage.textContent = 'Your article is published!';
+    successMessage.textContent = 'Nyheita er publisert!';
     setTimeout(() => {
         window.location.href = `./index.html?id=${data.id}`;
     }, 1500);

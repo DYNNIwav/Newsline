@@ -20,7 +20,7 @@ async function handleSubmit(event) {
     successMessage.textContent = '';
 
     if (!email || !password) {
-        errorMessage.textContent = 'Please fill in both email and password.';
+        errorMessage.textContent = 'Fyll inn både e-post og passord.';
         return;
     }
 
@@ -29,7 +29,7 @@ async function handleSubmit(event) {
     try {
         await login(email, password);
 
-        successMessage.textContent = 'Welcome back!';
+        successMessage.textContent = 'Velkomen tilbake!';
         setTimeout(() => {
             window.location.href = '../';
         }, 1500);
