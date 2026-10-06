@@ -1,17 +1,5 @@
 import { supabase } from './supabase.js';
-function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString('en-GB', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-    });
-}
-
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+import { formatDate, escapeHtml } from './utils.js';
 
 const params = new URLSearchParams(window.location.search);
 const postId = params.get('id');
